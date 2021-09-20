@@ -38275,7 +38275,7 @@ var render = function() {
         _vm._v(" "),
         _c("h5", [_vm._v("Tags")]),
         _vm._v(" "),
-        _vm.post.tags
+        _vm.post.tags.length
           ? _c(
               "p",
               { staticClass: "card-text" },
@@ -38288,11 +38288,13 @@ var render = function() {
               }),
               0
             )
-          : _c("p", [_c("span", [_vm._v("No Tags")])]),
+          : _c("p", { staticClass: "card-text" }, [
+              _c("span", [_vm._v("No Tags")])
+            ]),
         _vm._v(" "),
         _c(
           "router-link",
-          { staticClass: "btn btn-primary", attrs: { to: { name: "posts" } } },
+          { staticClass: "btn btn-primary", attrs: { to: { name: "post" } } },
           [_vm._v("\n            Go back           \n        ")]
         )
       ],

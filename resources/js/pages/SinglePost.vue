@@ -9,15 +9,15 @@
             <p class="card-text">content: {{ post.content}}</p>
             <p v-if="post.category" class="card-text">category: {{ post.category.name}}</p>
             <h5>Tags</h5>
-            <p v-if="post.tags" class="card-text">
+            <p v-if="post.tags.length" class="card-text">
                 <span  v-for="(tag,index) in post.tags" :key="index" class="badge badge-success">{{ tag.name}}</span>
                 
             </p>
-            <p v-else>
+            <p class="card-text" v-else>
                 <span>No Tags</span>
             </p>
 
-            <router-link :to="{name: 'posts'}" class="btn btn-primary">
+            <router-link :to="{name: 'post'}" class="btn btn-primary">
                 Go back           
             </router-link>
         </div>
